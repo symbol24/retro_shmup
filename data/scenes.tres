@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="SceneData" load_steps=2 format=3 uid="uid://blkm11hw2al87"]
+
+[ext_resource type="Script" uid="uid://bxun13epfkarj" path="res://code/utilities/scene_data.gd" id="1_b5506"]
+
+[resource]
+script = ExtResource("1_b5506")
+list = Dictionary[StringName, String]({
+&"test": "uid://c1lx6tynyfmnh"
+})
+metadata/_custom_type_script = "uid://bxun13epfkarj"

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SceneData" load_steps=2 format=3 uid="uid://cv5luw2785aq"]
+
+[ext_resource type="Script" uid="uid://bxun13epfkarj" path="res://code/utilities/scene_data.gd" id="1_ngwxe"]
+
+[resource]
+script = ExtResource("1_ngwxe")
+list = Dictionary[StringName, String]({
+&"credits": "uid://c11rpl0emwc8n",
+&"how_to": "uid://c741gc1ncbqmb",
+&"loading_screen": "uid://c587n0l8i4ur6",
+&"main_menu": "uid://b22o1klwn22dy",
+&"pause_menu": "",
+&"play_ui": "",
+&"settings": "res://scenes/ui/menus/settings.tscn"
+})
+metadata/_custom_type_script = "uid://bxun13epfkarj"
