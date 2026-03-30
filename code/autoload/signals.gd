@@ -30,8 +30,23 @@ signal update_bus_volume(bus:StringName, value:float)
 signal play_audio(audio_file:AudioFile)
 signal audio_finished(audio_stream_player:RidAudioStreamPlayer)
 
-# Data Manager
+# Save Manager
 signal save
 signal load
 signal save_result(code:int)
 signal load_result(code:int)
+
+# Spawn Manager
+signal spawn_player
+
+# Star Manager
+signal activate_stars(is_active:bool)
+signal stars_super_speed
+signal stars_reset_speed
+
+# Projectiles
+signal return_projectile(projectile:Projectile)
+
+
+# Player Ship?
+signal activate_player_ship(value:bool)

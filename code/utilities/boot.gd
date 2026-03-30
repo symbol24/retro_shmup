@@ -9,7 +9,7 @@ var _current := &""
 var _next := &"godot"
 var _can_skip := false
 var _can_click := true
-var _data:DataManager
+var _save:SaveManager
 @onready var animator: AnimationPlayer = %animator
 
 
@@ -63,9 +63,9 @@ func _load_managers() -> void:
 	var ui := Ui.new()
 	get_tree().root.add_child.call_deferred(ui)
 	if not ui.is_node_ready(): await ui.ready
-	_data = DataManager.new()
-	get_tree().root.add_child.call_deferred(_data)
-	if not _data.is_node_ready(): await _data.ready
+	_save = SaveManager.new()
+	get_tree().root.add_child.call_deferred(_save)
+	if not _save.is_node_ready(): await _save.ready
 	var sm := SceneManager.new()
 	get_tree().root.add_child.call_deferred(sm)
 	if not sm.is_node_ready(): await sm.ready
@@ -78,9 +78,9 @@ func _load_managers() -> void:
 
 
 func _load_settings() -> void:
-	Signals.update_window_mode.emit(_data.loaded_save_file.window_mode, _data.loaded_save_file.resolution)
-	Signals.update_bus_volume.emit(&"Master", _data.loaded_save_file.master_volume)
-	Signals.update_bus_volume.emit(&"Music", _data.loaded_save_file.music_volume)
-	Signals.update_bus_volume.emit(&"SFX", _data.loaded_save_file.sfx_volume)
-	Signals.update_font.emit(_data.loaded_save_file.dyslexic_font)
-	Signals.update_language.emit(_data.loaded_save_file.language)
+	Signals.update_window_mode.emit(_save.loaded_save_file.window_mode, _save.loaded_save_file.resolution)
+	Signals.update_bus_volume.emit(&"Master", _save.loaded_save_file.master_volume)
+	Signals.update_bus_volume.emit(&"Music", _save.loaded_save_file.music_volume)
+	Signals.update_bus_volume.emit(&"SFX", _save.loaded_save_file.sfx_volume)
+	Signals.update_font.emit(_save.loaded_save_file.dyslexic_font)
+	Signals.update_language.emit(_save.loaded_save_file.language)

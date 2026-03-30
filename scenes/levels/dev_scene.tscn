@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://4ctdr1gpdcie"]
+
+[ext_resource type="Script" uid="uid://cbgislv7pwkk5" path="res://code/levels/gameplay_scene.gd" id="1_ed23b"]
+
+[node name="DevScene" type="Node2D" unique_id=1760865161]
+script = ExtResource("1_ed23b")
+
+[node name="background" type="ColorRect" parent="." unique_id=280833901]
+custom_minimum_size = Vector2(490, 280)
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 285.0
+offset_bottom = 175.0
+color = Color(0.056472056, 0.04571677, 0.10719197, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=152985679]
+offset = Vector2(240, 135)

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://buc5nuxwt3cvw"]
+
+[ext_resource type="Script" uid="uid://culrtl5eam6j7" path="res://code/ui/menus/player_ui.gd" id="1_88bcr"]
+
+[node name="PlayerUi" type="Control" unique_id=109842039]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_88bcr")
+id = &"play_ui"
+metadata/_custom_type_script = "uid://bywk6b8aj4mi"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=332528688]
+custom_minimum_size = Vector2(480, 270)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 0
+
+[node name="left_rect" type="ColorRect" parent="HBoxContainer" unique_id=1267693619]
+custom_minimum_size = Vector2(105, 0)
+layout_mode = 2
+color = Color(0.27752772, 0.27752772, 0.27752772, 1)
+
+[node name="center" type="Control" parent="HBoxContainer" unique_id=1576067632]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="right_rect" type="ColorRect" parent="HBoxContainer" unique_id=1799979210]
+custom_minimum_size = Vector2(105, 0)
+layout_mode = 2
+color = Color(0.27752772, 0.27752772, 0.27752772, 1)

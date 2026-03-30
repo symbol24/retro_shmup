@@ -7,10 +7,10 @@ const TIMED_CHANGE_TITLE := "timed_change_popup_title"
 const TIMED_CHANGE_DESC := "timed_change_popup_desc"
 
 
-var _data:DataManager = null:
+var _save:SaveManager = null:
 	get:
-		if _data == null: _data = get_tree().get_first_node_in_group(&"data_manager")
-		return _data
+		if _save == null: _save = get_tree().get_first_node_in_group(&"save_manager")
+		return _save
 var _gm:GameManager = null:
 	get:
 		if _gm == null: _gm = get_tree().get_first_node_in_group(&"game_manager")
@@ -46,13 +46,13 @@ func toggle_ridcontrol(_id:StringName = id, display := false) -> void:
 
 
 func _update_settings() -> void:
-	_master = _data.loaded_save_file.master_volume
-	_music = _data.loaded_save_file.music_volume
-	_sfx = _data.loaded_save_file.sfx_volume
-	_dyslexic = _data.loaded_save_file.dyslexic_font
-	_locale = _data.loaded_save_file.language
-	_window_mode = _data.loaded_save_file.window_mode
-	_resolution = _data.loaded_save_file.resolution
+	_master = _save.loaded_save_file.master_volume
+	_music = _save.loaded_save_file.music_volume
+	_sfx = _save.loaded_save_file.sfx_volume
+	_dyslexic = _save.loaded_save_file.dyslexic_font
+	_locale = _save.loaded_save_file.language
+	_window_mode = _save.loaded_save_file.window_mode
+	_resolution = _save.loaded_save_file.resolution
 	Signals.update_setting_from_data.emit(&"Master", _master)
 	Signals.update_setting_from_data.emit(&"Music", _music)
 	Signals.update_setting_from_data.emit(&"SFX", _sfx)
@@ -90,10 +90,10 @@ func _btn_back_pressed() -> void:
 
 func _check_changes() -> bool:
 	var result := false
-	if _master != _data.loaded_save_file.master_volume: result = true
-	if _music != _data.loaded_save_file.music_volume: result = true
-	if _sfx != _data.loaded_save_file.sfx_volume: result = true
-	if _dyslexic != _data.loaded_save_file.dyslexic_font: result = true
+	if _master != _save.loaded_save_file.master_volume: result = true
+	if _music != _save.loaded_save_file.music_volume: result = true
+	if _sfx != _save.loaded_save_file.sfx_volume: result = true
+	if _dyslexic != _save.loaded_save_file.dyslexic_font: result = true
 	return result
 
 
@@ -143,26 +143,26 @@ func _check_popup_results(_id:StringName, result:bool) -> void:
 				_btn_back_pressed()
 		&"language":
 			if result:
-				_data.loaded_save_file.language = _locale
+				_save.loaded_save_file.language = _locale
 				Signals.save.emit()
 			else:
-				_locale = _data.loaded_save_file.language
+				_locale = _save.loaded_save_file.language
 				Signals.update_language.emit(_locale)
 				Signals.update_setting_from_data.emit(&"language", _gm.LOCALES.find(_locale))
 		&"window_mode":
 			if result:
-				_data.loaded_save_file.window_mode = _window_mode
+				_save.loaded_save_file.window_mode = _window_mode
 				Signals.save.emit()
 			else:
-				_window_mode = _data.loaded_save_file.window_mode
+				_window_mode = _save.loaded_save_file.window_mode
 				Signals.update_window_mode.emit(_window_mode, _resolution)
 				Signals.update_setting_from_data.emit(&"window_mode", _window_mode)
 		&"resolution":
 			if result:
-				_data.loaded_save_file.resolution = _resolution
+				_save.loaded_save_file.resolution = _resolution
 				Signals.save.emit()
 			else:
-				_resolution = _data.loaded_save_file.resolution
+				_resolution = _save.loaded_save_file.resolution
 				Signals.update_resolution.emit(_resolution)
 				Signals.update_setting_from_data.emit(&"resolution", _resolution)
 		_:
@@ -170,8 +170,8 @@ func _check_popup_results(_id:StringName, result:bool) -> void:
 
 
 func _save_changes() -> void:
-	if _data.loaded_save_file.master_volume != _master: _data.loaded_save_file.master_volume = _master
-	if _data.loaded_save_file.music_volume != _music: _data.loaded_save_file.music_volume = _music
-	if _data.loaded_save_file.sfx_volume != _music: _data.loaded_save_file.sfx_volume = _sfx
-	if _data.loaded_save_file.dyslexic_font != _dyslexic: _data.loaded_save_file.dyslexic_font = _dyslexic
+	if _save.loaded_save_file.master_volume != _master: _save.loaded_save_file.master_volume = _master
+	if _save.loaded_save_file.music_volume != _music: _save.loaded_save_file.music_volume = _music
+	if _save.loaded_save_file.sfx_volume != _music: _save.loaded_save_file.sfx_volume = _sfx
+	if _save.loaded_save_file.dyslexic_font != _dyslexic: _save.loaded_save_file.dyslexic_font = _dyslexic
 	Signals.save.emit()

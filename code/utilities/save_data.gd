@@ -21,3 +21,6 @@ var default_dyslexic_font := false
 @export var window_mode:GameManager.Window_Mode = GameManager.Window_Mode.FULLSCREEN
 var default_resolution := 2
 var default_windowmod:GameManager.Window_Mode = GameManager.Window_Mode.FULLSCREEN
+
+@export var last_selected_ship:PlayerShipData = null
+var current_ship:PlayerShipData = null

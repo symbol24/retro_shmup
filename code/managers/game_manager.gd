@@ -23,6 +23,8 @@ const LOCALES:Array[String] = [
 	"fr",
 	"fr-CA"
 ]
+const HORMAX:Array = [105, 375]
+const VERMAX:Array = [0, 270]
 
 
 enum Window_Mode {
@@ -32,10 +34,10 @@ enum Window_Mode {
 }
 
 
-var _data:DataManager = null:
+var _save:SaveManager = null:
 	get:
-		if _data == null: _data = get_tree().get_first_node_in_group(&"data_manager")
-		return _data
+		if _save == null: _save = get_tree().get_first_node_in_group(&"save_manager")
+		return _save
 var theme:Theme
 
 

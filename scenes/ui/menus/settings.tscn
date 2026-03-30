@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://85d4t0bk0edr"]
+[gd_scene format=3 uid="uid://85d4t0bk0edr"]
 
 [ext_resource type="Script" uid="uid://dxjetq1sox416" path="res://code/ui/menus/settings.gd" id="1_2wrqq"]
 [ext_resource type="PackedScene" uid="uid://ctv7qqq0s3aa6" path="res://scenes/ui/menus/settings/setting_slider.tscn" id="2_81oq2"]
@@ -6,15 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://mggxlsmsyssn" path="res://scenes/ui/menus/settings/setting_dropdown.tscn" id="4_x0vp0"]
 [ext_resource type="Script" uid="uid://cwr2iqm80a030" path="res://code/ui/rid_button.gd" id="5_t45wk"]
 
-[node name="Settings" type="Control"]
+[node name="Settings" type="Control" unique_id=1568643287]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_2wrqq")
 id = &"settings"
 metadata/_custom_type_script = "uid://bywk6b8aj4mi"
 
-[node name="background" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(266, 202)
+[node name="background" type="ColorRect" parent="." unique_id=12131923]
+custom_minimum_size = Vector2(490, 280)
 layout_mode = 0
 offset_left = -5.0
 offset_top = -5.0
@@ -22,96 +22,97 @@ offset_right = 261.0
 offset_bottom = 197.0
 color = Color(0.47, 0.43083334, 0.235, 1)
 
-[node name="vbox" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(256, 192)
+[node name="vbox" type="VBoxContainer" parent="." unique_id=1450156297]
+custom_minimum_size = Vector2(480, 270)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/separation = 0
 
-[node name="page_title" type="Label" parent="vbox"]
-custom_minimum_size = Vector2(0, 50)
+[node name="page_title" type="Label" parent="vbox" unique_id=565807718]
+custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_type_variation = &"MenuTitle"
 text = "Settings"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="spacer" type="Control" parent="vbox"]
+[node name="spacer" type="Control" parent="vbox" unique_id=577005572]
 custom_minimum_size = Vector2(0, 5)
 layout_mode = 2
 
-[node name="hbox" type="HBoxContainer" parent="vbox"]
+[node name="hbox" type="HBoxContainer" parent="vbox" unique_id=300433004]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 
-[node name="spacer" type="Control" parent="vbox/hbox"]
-custom_minimum_size = Vector2(30, 30)
+[node name="spacer" type="Control" parent="vbox/hbox" unique_id=871710672]
+custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 
-[node name="settings_vbox" type="VBoxContainer" parent="vbox/hbox"]
+[node name="settings_vbox" type="VBoxContainer" parent="vbox/hbox" unique_id=1510255541]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="master_volume" parent="vbox/hbox/settings_vbox" instance=ExtResource("2_81oq2")]
+[node name="master_volume" parent="vbox/hbox/settings_vbox" unique_id=384490862 instance=ExtResource("2_81oq2")]
 layout_mode = 2
 display_text = "Master"
 setting_id = &"Master"
 
-[node name="music_volume" parent="vbox/hbox/settings_vbox" instance=ExtResource("2_81oq2")]
+[node name="music_volume" parent="vbox/hbox/settings_vbox" unique_id=349832200 instance=ExtResource("2_81oq2")]
 layout_mode = 2
 display_text = "Music"
 setting_id = &"Music"
 
-[node name="sfx_volume" parent="vbox/hbox/settings_vbox" instance=ExtResource("2_81oq2")]
+[node name="sfx_volume" parent="vbox/hbox/settings_vbox" unique_id=1043770637 instance=ExtResource("2_81oq2")]
 layout_mode = 2
 display_text = "SFX"
 setting_id = &"SFX"
 
-[node name="dyslexia_font" parent="vbox/hbox/settings_vbox" instance=ExtResource("3_81oq2")]
+[node name="dyslexia_font" parent="vbox/hbox/settings_vbox" unique_id=1039274549 instance=ExtResource("3_81oq2")]
 layout_mode = 2
 btn_on = "On"
 btn_off = "Off"
 display_text = "Dyslexic Friendly"
 setting_id = &"dyslexic_friendly"
 
-[node name="language" parent="vbox/hbox/settings_vbox" instance=ExtResource("4_x0vp0")]
+[node name="language" parent="vbox/hbox/settings_vbox" unique_id=1530443833 instance=ExtResource("4_x0vp0")]
 layout_mode = 2
 display_text = "Language"
 setting_id = &"language"
 
-[node name="window_mode" parent="vbox/hbox/settings_vbox" instance=ExtResource("4_x0vp0")]
+[node name="window_mode" parent="vbox/hbox/settings_vbox" unique_id=2031704669 instance=ExtResource("4_x0vp0")]
 layout_mode = 2
 display_text = "Window Mode"
 setting_id = &"window_mode"
 
-[node name="resolution" parent="vbox/hbox/settings_vbox" instance=ExtResource("4_x0vp0")]
+[node name="resolution" parent="vbox/hbox/settings_vbox" unique_id=418340880 instance=ExtResource("4_x0vp0")]
 layout_mode = 2
 display_text = "Resolution"
 setting_id = &"resolution"
 
-[node name="spacer2" type="Control" parent="vbox/hbox"]
-custom_minimum_size = Vector2(30, 30)
+[node name="spacer2" type="Control" parent="vbox/hbox" unique_id=591707424]
+custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 
-[node name="bottom_hbox" type="HBoxContainer" parent="vbox"]
-custom_minimum_size = Vector2(0, 20)
+[node name="bottom_hbox" type="HBoxContainer" parent="vbox" unique_id=468150971]
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 0
 
-[node name="btn_back" type="Button" parent="vbox/bottom_hbox"]
+[node name="btn_back" type="Button" parent="vbox/bottom_hbox" unique_id=2022942459]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(40, 0)
+custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 10
 text = "Back"
 script = ExtResource("5_t45wk")
 
-[node name="spacer" type="Control" parent="vbox/bottom_hbox"]
+[node name="spacer" type="Control" parent="vbox/bottom_hbox" unique_id=590455023]
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 
-[node name="spacer_bottom" type="Control" parent="vbox"]
-custom_minimum_size = Vector2(0, 10)
+[node name="spacer_bottom" type="Control" parent="vbox" unique_id=1760406948]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2

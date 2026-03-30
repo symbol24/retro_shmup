@@ -26,6 +26,7 @@ func _ready() -> void:
 
 func _btn_play_pressed() -> void:
 	if play_target != &"": Signals.load_scene.emit(play_target, true, true)
+	toggle_ridcontrol(id, false)
 
 
 func _btn_settings_pressed() -> void:

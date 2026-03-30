@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ce58vjc76isnj"]
+
+[ext_resource type="Script" uid="uid://b4eomggngf5am" path="res://code/ships/player/weapons/auto_shoot_weapon.gd" id="1_o02rx"]
+
+[node name="TestWeapon" type="Node2D" unique_id=1202850309 node_paths=PackedStringArray("points")]
+script = ExtResource("1_o02rx")
+points = [NodePath("single_fire")]
+metadata/_custom_type_script = "uid://bxa68cdtelvqw"
+
+[node name="single_fire" type="Marker2D" parent="." unique_id=937341004]
+position = Vector2(0, -4)

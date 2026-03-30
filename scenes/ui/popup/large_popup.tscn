@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dbbdbx6psq7v8"]
+[gd_scene format=3 uid="uid://dbbdbx6psq7v8"]
 
 [ext_resource type="Script" uid="uid://dfkne2e2ue6i2" path="res://code/ui/popup/large_popup.gd" id="1_armox"]
 
-[node name="LargePopup" type="Control"]
+[node name="LargePopup" type="Control" unique_id=1044373970]
 top_level = true
 custom_minimum_size = Vector2(256, 192)
 layout_mode = 3
@@ -13,21 +13,21 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_armox")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=424490877]
 clip_contents = true
-custom_minimum_size = Vector2(128, 96)
+custom_minimum_size = Vector2(240, 110)
 layout_mode = 0
-offset_left = 64.0
-offset_top = 32.0
-offset_right = 192.0
-offset_bottom = 128.0
+offset_left = 120.0
+offset_top = 48.0
+offset_right = 360.0
+offset_bottom = 158.0
 theme_type_variation = &"LargePopupPC"
 
-[node name="vbox" type="VBoxContainer" parent="PanelContainer"]
+[node name="vbox" type="VBoxContainer" parent="PanelContainer" unique_id=845325000]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="title" type="Label" parent="PanelContainer/vbox"]
+[node name="title" type="Label" parent="PanelContainer/vbox" unique_id=329186906]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
@@ -38,7 +38,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 text_overrun_behavior = 4
 
-[node name="description" type="Label" parent="PanelContainer/vbox"]
+[node name="description" type="Label" parent="PanelContainer/vbox" unique_id=1920522309]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
@@ -49,16 +49,16 @@ autowrap_mode = 3
 clip_text = true
 text_overrun_behavior = 4
 
-[node name="bottom_hbox" type="HBoxContainer" parent="PanelContainer/vbox"]
-custom_minimum_size = Vector2(0, 12)
+[node name="bottom_hbox" type="HBoxContainer" parent="PanelContainer/vbox" unique_id=92329187]
+custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="spacer" type="Control" parent="PanelContainer/vbox/bottom_hbox"]
+[node name="spacer" type="Control" parent="PanelContainer/vbox/bottom_hbox" unique_id=1601813718]
 custom_minimum_size = Vector2(2, 0)
 layout_mode = 2
 
-[node name="timer_label" type="Label" parent="PanelContainer/vbox/bottom_hbox"]
+[node name="timer_label" type="Label" parent="PanelContainer/vbox/bottom_hbox" unique_id=1843088899]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 1
@@ -67,27 +67,27 @@ text = "00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="spacer2" type="Control" parent="PanelContainer/vbox/bottom_hbox"]
+[node name="spacer2" type="Control" parent="PanelContainer/vbox/bottom_hbox" unique_id=581267873]
 custom_minimum_size = Vector2(2, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="btn_confirm" type="Button" parent="PanelContainer/vbox/bottom_hbox"]
+[node name="btn_confirm" type="Button" parent="PanelContainer/vbox/bottom_hbox" unique_id=109388770]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 12)
+custom_minimum_size = Vector2(40, 24)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
 theme_type_variation = &"PopupBtn"
 text = "Confirm"
 
-[node name="spacer3" type="Control" parent="PanelContainer/vbox/bottom_hbox"]
+[node name="spacer3" type="Control" parent="PanelContainer/vbox/bottom_hbox" unique_id=1932701126]
 custom_minimum_size = Vector2(2, 0)
 layout_mode = 2
 
-[node name="btn_cancel" type="Button" parent="PanelContainer/vbox/bottom_hbox"]
+[node name="btn_cancel" type="Button" parent="PanelContainer/vbox/bottom_hbox" unique_id=2126372835]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 12)
+custom_minimum_size = Vector2(40, 24)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -95,6 +95,6 @@ theme_type_variation = &"PopupBtn"
 text = "Cancel
 "
 
-[node name="spacer4" type="Control" parent="PanelContainer/vbox/bottom_hbox"]
+[node name="spacer4" type="Control" parent="PanelContainer/vbox/bottom_hbox" unique_id=28816335]
 custom_minimum_size = Vector2(2, 0)
 layout_mode = 2

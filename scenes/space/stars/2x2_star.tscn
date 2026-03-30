@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b5v46alvq15kj"]
+
+[ext_resource type="Script" uid="uid://cdvguetiwfhyo" path="res://code/space/stars/moving_star.gd" id="1_8ejec"]
+[ext_resource type="Texture2D" uid="uid://bsa7em6lyvtp4" path="res://textures/2x2_white.png" id="1_vd8dm"]
+
+[node name="2x2Star" type="Sprite2D" unique_id=1103448577]
+texture = ExtResource("1_vd8dm")
+script = ExtResource("1_8ejec")
+metadata/_custom_type_script = "uid://cdvguetiwfhyo"

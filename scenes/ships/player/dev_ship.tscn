@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://wtosbx27eyob"]
+
+[ext_resource type="Script" uid="uid://dw1iquoviiylx" path="res://code/ships/player/player_ship.gd" id="1_kymkn"]
+[ext_resource type="Resource" uid="uid://beexh7o4k0xpj" path="res://data/ships/player/dev_ship.tres" id="2_2f7qy"]
+[ext_resource type="Texture2D" uid="uid://4o0t8eh6kddm" path="res://textures/ships/test_ship_12x12.png" id="3_2f7qy"]
+[ext_resource type="Script" uid="uid://bmyrf5huehs5m" path="res://code/ships/player/actions/normal_move.gd" id="3_oxwsm"]
+[ext_resource type="Texture2D" uid="uid://8y42wpdln7xe" path="res://textures/ships/test_ship_8x8.png" id="3_y8wpi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0vut"]
+atlas = ExtResource("3_y8wpi")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8wpi"]
+atlas = ExtResource("3_2f7qy")
+region = Rect2(0, 0, 12, 12)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2f7qy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0vut")
+}],
+"loop": true,
+"name": &"8x8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8wpi")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c0k12"]
+radius = 2.0
+
+[node name="DevShip" type="CharacterBody2D" unique_id=1038689062]
+collision_layer = 2
+motion_mode = 1
+script = ExtResource("1_kymkn")
+debug_data = ExtResource("2_2f7qy")
+
+[node name="ship_sprite" type="AnimatedSprite2D" parent="." unique_id=1846603594]
+sprite_frames = SubResource("SpriteFrames_2f7qy")
+animation = &"8x8"
+autoplay = "8x8"
+
+[node name="move_collider" type="CollisionShape2D" parent="." unique_id=1741493867]
+shape = SubResource("CircleShape2D_c0k12")
+
+[node name="NormalMove" type="Node2D" parent="." unique_id=81136729]
+script = ExtResource("3_oxwsm")
+metadata/_custom_type_script = "uid://bmyrf5huehs5m"

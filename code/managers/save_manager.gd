@@ -1,4 +1,4 @@
-class_name DataManager extends Node
+class_name SaveManager extends Node
 
 
 const FOLDER = "user://save/"
@@ -10,8 +10,8 @@ var all_save_data:Array[SaveData] = []
 
 
 func _init() -> void:
-	add_to_group(&"data_manager")
-	name = &"data_manager"
+	add_to_group(&"save_manager")
+	name = &"save_manager"
 	process_mode = PROCESS_MODE_ALWAYS
 
 

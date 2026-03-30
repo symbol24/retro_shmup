@@ -1,24 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://mggxlsmsyssn"]
+[gd_scene format=3 uid="uid://mggxlsmsyssn"]
 
 [ext_resource type="Script" uid="uid://c8a7mu5783uh3" path="res://code/ui/menus/settings/setting_dropdown.gd" id="1_j2dsu"]
 [ext_resource type="Script" uid="uid://c1wsggu7k1v13" path="res://code/ui/rid_option_button.gd" id="2_g5dai"]
 
-[node name="SettingDropdown" type="HBoxContainer"]
+[node name="SettingDropdown" type="HBoxContainer" unique_id=152663136]
 custom_minimum_size = Vector2(196, 10)
 size_flags_horizontal = 3
 script = ExtResource("1_j2dsu")
 metadata/_custom_type_script = "uid://bne5ns504simr"
 
-[node name="setting_label" type="Label" parent="."]
+[node name="setting_label" type="Label" parent="." unique_id=1355738581]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(60, 0)
+custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 theme_type_variation = &"SettingLabel"
 text = "name of setting ifdkjfdfkjdf"
 clip_text = true
 text_overrun_behavior = 3
 
-[node name="drop_down" type="OptionButton" parent="."]
+[node name="drop_down" type="OptionButton" parent="." unique_id=683014809]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 8)
 layout_mode = 2

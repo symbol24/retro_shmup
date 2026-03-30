@@ -1,17 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://c11rpl0emwc8n"]
+[gd_scene format=3 uid="uid://c11rpl0emwc8n"]
 
 [ext_resource type="Script" uid="uid://bwjnem4ctxbh1" path="res://code/ui/menus/credits.gd" id="1_3ikd0"]
 [ext_resource type="Script" uid="uid://cwr2iqm80a030" path="res://code/ui/rid_button.gd" id="2_w063j"]
 
-[node name="Credits" type="Control"]
+[node name="Credits" type="Control" unique_id=1763688825]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_3ikd0")
 id = &"credits"
 metadata/_custom_type_script = "uid://bywk6b8aj4mi"
 
-[node name="background" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(266, 202)
+[node name="background" type="ColorRect" parent="." unique_id=17440890]
+custom_minimum_size = Vector2(490, 280)
 layout_mode = 0
 offset_left = -5.0
 offset_top = -5.0
@@ -19,59 +19,59 @@ offset_right = 261.0
 offset_bottom = 197.0
 color = Color(0.17850265, 0.31921613, 0.23816916, 1)
 
-[node name="vbox" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(256, 192)
+[node name="vbox" type="VBoxContainer" parent="." unique_id=2066238399]
+custom_minimum_size = Vector2(480, 270)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/separation = 0
 
-[node name="page_title" type="Label" parent="vbox"]
-custom_minimum_size = Vector2(0, 50)
+[node name="page_title" type="Label" parent="vbox" unique_id=1435873359]
+custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_type_variation = &"MenuTitle"
 text = "Credits"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="spacer" type="Control" parent="vbox"]
+[node name="spacer" type="Control" parent="vbox" unique_id=1359635285]
 custom_minimum_size = Vector2(0, 5)
 layout_mode = 2
 
-[node name="hbox" type="HBoxContainer" parent="vbox"]
+[node name="hbox" type="HBoxContainer" parent="vbox" unique_id=1000082455]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 0
 
-[node name="spacer" type="Control" parent="vbox/hbox"]
+[node name="spacer" type="Control" parent="vbox/hbox" unique_id=1266675983]
 custom_minimum_size = Vector2(50, 20)
 layout_mode = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="vbox/hbox"]
+[node name="ScrollContainer" type="ScrollContainer" parent="vbox/hbox" unique_id=529634231]
 layout_mode = 2
 size_flags_horizontal = 3
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
 
-[node name="vbox2" type="VBoxContainer" parent="vbox/hbox/ScrollContainer"]
+[node name="vbox2" type="VBoxContainer" parent="vbox/hbox/ScrollContainer" unique_id=636849987]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 0
 
-[node name="section_title" type="Label" parent="vbox/hbox/ScrollContainer/vbox2"]
+[node name="section_title" type="Label" parent="vbox/hbox/ScrollContainer/vbox2" unique_id=724033740]
 layout_mode = 2
 theme_type_variation = &"CreditSectionTitle"
 text = "Section"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="section" type="GridContainer" parent="vbox/hbox/ScrollContainer/vbox2"]
+[node name="section" type="GridContainer" parent="vbox/hbox/ScrollContainer/vbox2" unique_id=1554307585]
 layout_mode = 2
 theme_override_constants/h_separation = 0
 theme_override_constants/v_separation = 0
 columns = 2
 
-[node name="Label" type="Label" parent="vbox/hbox/ScrollContainer/vbox2/section"]
+[node name="Label" type="Label" parent="vbox/hbox/ScrollContainer/vbox2/section" unique_id=967800639]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_type_variation = &"CreditsNames"
@@ -79,7 +79,7 @@ text = "Position"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="vbox/hbox/ScrollContainer/vbox2/section"]
+[node name="Label2" type="Label" parent="vbox/hbox/ScrollContainer/vbox2/section" unique_id=595804060]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_type_variation = &"CreditsNames"
@@ -87,27 +87,27 @@ text = "Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="spacer2" type="Control" parent="vbox/hbox"]
+[node name="spacer2" type="Control" parent="vbox/hbox" unique_id=1757243298]
 custom_minimum_size = Vector2(50, 20)
 layout_mode = 2
 
-[node name="bottom_hbox" type="HBoxContainer" parent="vbox"]
-custom_minimum_size = Vector2(0, 20)
+[node name="bottom_hbox" type="HBoxContainer" parent="vbox" unique_id=425351504]
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="btn_back" type="Button" parent="vbox/bottom_hbox"]
+[node name="btn_back" type="Button" parent="vbox/bottom_hbox" unique_id=2130268936]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(40, 0)
+custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 10
 text = "Back"
 script = ExtResource("2_w063j")
 
-[node name="spacer" type="Control" parent="vbox/bottom_hbox"]
-custom_minimum_size = Vector2(10, 0)
+[node name="spacer" type="Control" parent="vbox/bottom_hbox" unique_id=1822206374]
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 
-[node name="spacer3" type="Control" parent="vbox"]
-custom_minimum_size = Vector2(0, 10)
+[node name="spacer3" type="Control" parent="vbox" unique_id=438014742]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2

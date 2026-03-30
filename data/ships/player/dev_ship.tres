@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PlayerShipData" format=3 uid="uid://beexh7o4k0xpj"]
+
+[ext_resource type="Script" uid="uid://cx4c3bmmwc14a" path="res://code/ships/player/player_ship_data.gd" id="1_x6kat"]
+[ext_resource type="Script" uid="uid://c7wpa6x22cvrm" path="res://code/ships/player/weapons/weapon_data.gd" id="2_btyna"]
+[ext_resource type="Resource" uid="uid://dw7piddy301nj" path="res://data/attacks/player_test_weapon.tres" id="2_d3emw"]
+
+[resource]
+script = ExtResource("1_x6kat")
+id = &"dev_ship"
+uid = "uid://wtosbx27eyob"
+acceleration = 1500.0
+friction = 1500.0
+weapons = Array[ExtResource("2_btyna")]([ExtResource("2_d3emw")])
+metadata/_custom_type_script = "uid://cx4c3bmmwc14a"

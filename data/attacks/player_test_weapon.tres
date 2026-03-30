@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://dw7piddy301nj"]
+
+[ext_resource type="Script" uid="uid://qnhy4n5ve638" path="res://code/attacks/projectiles/projectile_data.gd" id="1_p5jq3"]
+[ext_resource type="Script" uid="uid://c7wpa6x22cvrm" path="res://code/ships/player/weapons/weapon_data.gd" id="1_t07ip"]
+
+[sub_resource type="Resource" id="Resource_u2n82"]
+script = ExtResource("1_p5jq3")
+uid = "uid://btk4ch3wpqmds"
+id = &"test_proj"
+metadata/_custom_type_script = "uid://qnhy4n5ve638"
+
+[resource]
+script = ExtResource("1_t07ip")
+id = &"test_weapon"
+uid = "uid://ce58vjc76isnj"
+projectile_data = SubResource("Resource_u2n82")
+burst_delay = 1.0
+metadata/_custom_type_script = "uid://c7wpa6x22cvrm"

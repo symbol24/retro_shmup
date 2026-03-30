@@ -1,17 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://c741gc1ncbqmb"]
+[gd_scene format=3 uid="uid://c741gc1ncbqmb"]
 
 [ext_resource type="Script" uid="uid://d1ioocmrt1m4r" path="res://code/ui/menus/how_to.gd" id="1_hrb4d"]
 [ext_resource type="Script" uid="uid://cwr2iqm80a030" path="res://code/ui/rid_button.gd" id="2_4brnw"]
 
-[node name="HowTo" type="Control"]
+[node name="HowTo" type="Control" unique_id=462975892]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_hrb4d")
 id = &"how_to"
 metadata/_custom_type_script = "uid://bywk6b8aj4mi"
 
-[node name="background" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(266, 202)
+[node name="background" type="ColorRect" parent="." unique_id=2100686434]
+custom_minimum_size = Vector2(490, 280)
 layout_mode = 0
 offset_left = -5.0
 offset_top = -5.0
@@ -19,41 +19,42 @@ offset_right = 261.0
 offset_bottom = 197.0
 color = Color(0.1302034, 0.2952676, 0.4363467, 1)
 
-[node name="vbox" type="VBoxContainer" parent="."]
+[node name="vbox" type="VBoxContainer" parent="." unique_id=793079782]
+custom_minimum_size = Vector2(480, 270)
 layout_mode = 0
 offset_right = 256.0
 offset_bottom = 192.0
 theme_override_constants/separation = 0
 
-[node name="page_title" type="Label" parent="vbox"]
-custom_minimum_size = Vector2(0, 50)
+[node name="page_title" type="Label" parent="vbox" unique_id=1002372819]
+custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 theme_type_variation = &"MenuTitle"
 text = "How To"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="spacer" type="Control" parent="vbox"]
+[node name="spacer" type="Control" parent="vbox" unique_id=1723192396]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="bottom_hbox" type="HBoxContainer" parent="vbox"]
-custom_minimum_size = Vector2(0, 20)
+[node name="bottom_hbox" type="HBoxContainer" parent="vbox" unique_id=1499580391]
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="btn_back" type="Button" parent="vbox/bottom_hbox"]
+[node name="btn_back" type="Button" parent="vbox/bottom_hbox" unique_id=279568014]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(40, 0)
+custom_minimum_size = Vector2(80, 0)
 layout_mode = 2
 size_flags_horizontal = 10
 text = "Back"
 script = ExtResource("2_4brnw")
 
-[node name="spacer" type="Control" parent="vbox/bottom_hbox"]
-custom_minimum_size = Vector2(10, 0)
+[node name="spacer" type="Control" parent="vbox/bottom_hbox" unique_id=390921499]
+custom_minimum_size = Vector2(20, 0)
 layout_mode = 2
 
-[node name="spacer_bottom" type="Control" parent="vbox"]
-custom_minimum_size = Vector2(0, 10)
+[node name="spacer_bottom" type="Control" parent="vbox" unique_id=1496248177]
+custom_minimum_size = Vector2(0, 20)
 layout_mode = 2

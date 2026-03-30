@@ -1,0 +1,65 @@
+{
+	"categories": [
+		{
+			"uuid": "78a39daf-02e5-4b14-ab94-64cc9fa06385",
+			"title": "Task",
+			"color": "569eff"
+		},
+		{
+			"uuid": "295fedad-a0d3-4190-af5e-13b60b3267ba",
+			"title": "Backlog",
+			"color": "2dfe7a"
+		},
+		{
+			"uuid": "1e7d3912-a51d-4131-a744-0519f552d2ad",
+			"title": "Bug",
+			"color": "eb0d94"
+		},
+		{
+			"uuid": "a86cf06c-37fc-4ce7-8981-26093356b062",
+			"title": "Design",
+			"color": "f3a510"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "d3f66386-e467-4b29-b363-045b90363aa8",
+			"title": "Todo",
+			"tasks": [
+				"9bef211c-5389-475a-ba2a-6c911d8d8e73"
+			]
+		},
+		{
+			"uuid": "edcf0120-c4bb-4b71-b189-eb5f4f4e3794",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "fe35486c-0d9f-4fc3-9aba-7d6f0773a9a5",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "9bef211c-5389-475a-ba2a-6c911d8d8e73",
+			"title": "make stars move at variable speeds",
+			"description": "",
+			"category": "78a39daf-02e5-4b14-ab94-64cc9fa06385",
+			"steps": []
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"d3f66386-e467-4b29-b363-045b90363aa8"
+			],
+			[
+				"edcf0120-c4bb-4b71-b189-eb5f4f4e3794"
+			],
+			[
+				"fe35486c-0d9f-4fc3-9aba-7d6f0773a9a5"
+			]
+		]
+	}
+}

@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnq18cj5m1x83"]
+[gd_scene format=3 uid="uid://bnq18cj5m1x83"]
 
 [ext_resource type="Script" uid="uid://dxq24sle07iww" path="res://code/ui/popup/small_popup.gd" id="1_qxfn4"]
 
-[node name="SmallPopup" type="Control"]
+[node name="SmallPopup" type="Control" unique_id=2033619316]
 custom_minimum_size = Vector2(256, 192)
 layout_mode = 3
 anchors_preset = 15
@@ -10,18 +10,18 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("1_qxfn4")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=451359898]
 custom_minimum_size = Vector2(128, 24)
 layout_mode = 0
-offset_left = 64.0
 offset_top = 30.0
-offset_right = 192.0
+offset_right = 164.0
 offset_bottom = 57.0
 theme_type_variation = &"SmallPpopupPanel"
 
-[node name="description" type="Label" parent="PanelContainer"]
+[node name="description" type="Label" parent="PanelContainer" unique_id=1874219330]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 21)
 layout_mode = 2

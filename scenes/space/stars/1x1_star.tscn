@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://btefskoflb717"]
+
+[ext_resource type="Texture2D" uid="uid://cxpg7vy3iuhfe" path="res://textures/1x1_white.png" id="1_7lkkd"]
+[ext_resource type="Script" uid="uid://cdvguetiwfhyo" path="res://code/space/stars/moving_star.gd" id="1_bycqq"]
+
+[node name="1x1Star" type="Sprite2D" unique_id=1665953068]
+texture = ExtResource("1_7lkkd")
+script = ExtResource("1_bycqq")
